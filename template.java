@@ -62,6 +62,10 @@ public class Solution {
            }
         }
     }
+    private static long gcd(long a, long b){
+        if(b==0)return a;
+        return gcd(b,a%b);
+    }
     public static void main(String[] args) throws IOException {
         FastReader sc = new FastReader();
         PrintWriter out = new PrintWriter(System.out);
