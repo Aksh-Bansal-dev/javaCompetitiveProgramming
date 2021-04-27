@@ -66,6 +66,16 @@ public class Solution {
         if(b==0)return a;
         return gcd(b,a%b);
     }
+    private static long pow(long x,long y){
+        if(y==0)return 1;
+        long temp = pow(x, y/2);
+        if(y%2==1){
+            return x*temp*temp;
+        }
+        else{
+            return temp*temp;
+        }
+    }
     public static void main(String[] args) throws IOException {
         FastReader sc = new FastReader();
         PrintWriter out = new PrintWriter(System.out);
