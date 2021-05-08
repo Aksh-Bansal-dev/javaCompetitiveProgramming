@@ -4,7 +4,7 @@ import java.io.*;
 
 //           THIS TEMPLATE MADE BY AKSH BANSAL.
 
-class Solution {
+public class Solution {
     static class FastReader {
         BufferedReader br;
         StringTokenizer st;
@@ -66,66 +66,64 @@ class Solution {
         if(b==0)return a;
         return gcd(b,a%b);
     }
+    private static long pow(long x,long y){
+        if(y==0)return 1;
+        long temp = pow(x, y/2);
+        if(y%2==1){
+            return x*temp*temp;
+        }
+        else{
+            return temp*temp;
+        }
+    }
+    static ArrayList<Integer>[] adj;
+    static void getAdj(int n,int q, FastReader sc){
+        adj = new ArrayList[n+1];
+        for(int i=1;i<=n;i++){
+            adj[i] = new ArrayList<>();
+        }
+        for(int i=0;i<q;i++){
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+
+            adj[a].add(b);
+            adj[b].add(a);
+        }
+    }
     public static void main(String[] args) throws IOException {
         FastReader sc = new FastReader();
         PrintWriter out = new PrintWriter(System.out);
         // primes();
         // ________________________________
 
-        // int t = sc.nextInt();
-        // StringBuilder output = new StringBuilder();
+        int t = sc.nextInt();
+        StringBuilder output = new StringBuilder();
 
-        // while (t-- > 0) {
-        // }
+        while (t-- > 0) {
+            int n = sc.nextInt();
+            int k = sc.nextInt();
+            getAdj(n,n-1,sc);
+            output.append(solver(n,k)).append("\n");
+        }
 
-        // out.println(output);
+        out.println(output);
         // _______________________________
 
         // int n = sc.nextInt();
-            int n = sc.nextInt();
-            int[] arr =new int[n];
-            for(int i=0;i<n;i++){
-                arr[i]  = sc.nextInt();
-            }
-            int q = sc.nextInt();
-            int[][] qq = new int[q][2];
-            for(int i=0;i<q;i++){
-                qq[i][0] = sc.nextInt();
-                qq[i][1] = sc.nextInt();
-            }
-            // output.append().append("\n");
-            solver(arr, n, qq, q, out);
         // out.println(solver());
         // ________________________________
         out.flush();
     }
-    private static int[] par;
-    private static int res;
-    public static void solver(int[] arr, int n, int[][] qq, int q, PrintWriter out) {
-        par = new int[n];
-        res = 0;
-        for(int i=0;i<n;i++){
-            par[i] = i+1;
-        }
 
-        for(int i=0;i<q;i++){
-            res = 0;
-            helper(arr, n, qq[i][0]-1, qq[i][1], qq[i][0]-1);
-            out.println(Math.max(0,res));
+    public static String solver(int n, int k) {
+        if(adj[k].size()<=1){
+            return "Ayush";
         }
-        
-    }
-    private static int helper(int[] arr, int n, int pos, int count, int d){
-        if(pos>=n-1 || arr[pos]>=count){
-            res += (pos-d)*Math.min(arr[pos], count);
-        // System.out.println(pos+"__"+ res);
-            arr[pos]-=count;
-            return pos==0?pos+1:pos;
+        if(n%2==0){
+            return "Ayush";
         }
-        res += (pos-d)*arr[pos];
-        int temp = arr[pos];
-        arr[pos] = 0;
-        par[pos] = helper(arr, n, par[pos], count-temp, d);
-        return par[pos];
+        else{
+            return "Ashish";
+        }
     }
 }

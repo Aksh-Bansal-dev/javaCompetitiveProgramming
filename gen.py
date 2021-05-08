@@ -1,11 +1,7 @@
-import random;
+import sys
 
-n = 5
-q = 5
-print(n)
-for i in range(n):
-    print(random.randint(1,10), end=" ")
-
-print(f"\n{q}")
-for i in range(q):
-    print(f"{random.randint(1,n-1)} {random.randint(1,10)}")
+# val = int(input())
+b = sys.argv[1]
+print(1)
+# for i in range(1, 101):
+print(b)
