@@ -90,9 +90,10 @@ public class Solution {
     //         adj[b].add(a);
     //     }
     // }
+    static PrintWriter out;
     public static void main(String[] args) throws IOException {
         FastReader sc = new FastReader();
-        PrintWriter out = new PrintWriter(System.out);
+        out = new PrintWriter(System.out);
         // primes();
         // ________________________________
 

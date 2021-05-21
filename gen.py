@@ -1,7 +1,8 @@
-import sys
+# import sys
+import random
 
-# val = int(input())
-b = sys.argv[1]
+# b = sys.argv[1]
 print(1)
-# for i in range(1, 101):
-print(b)
+print(10)
+for i in range(1, 11):
+    print(random.randint(1, 20), end=" ")
