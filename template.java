@@ -91,8 +91,9 @@ public class Solution {
     //     }
     // }
     static PrintWriter out;
+    static FastReader sc ;
     public static void main(String[] args) throws IOException {
-        FastReader sc = new FastReader();
+        sc = new FastReader();
         out = new PrintWriter(System.out);
         // primes();
         // ________________________________
