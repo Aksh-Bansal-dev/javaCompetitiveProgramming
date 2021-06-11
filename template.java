@@ -62,6 +62,24 @@ public class Solution {
            }
         }
     }
+    static void sort(int a[]){
+        ArrayList<Integer> arr=new ArrayList<>();
+        for(int i=0;i<a.length;i++)
+        arr.add(a[i]);
+        Collections.sort(arr);
+        for(int i=0;i<a.length;i++)
+        a[i]=arr.get(i);
+        
+    }
+    static void sort(long a[]){
+        ArrayList<Long> arr=new ArrayList<>();
+        for(int i=0;i<a.length;i++)
+        arr.add(a[i]);
+        Collections.sort(arr);
+        for(int i=0;i<a.length;i++)
+        a[i]=arr.get(i);
+        
+    }
     private static long gcd(long a, long b){
         if(b==0)return a;
         return gcd(b,a%b);
