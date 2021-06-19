@@ -6,10 +6,8 @@ with open("output.txt", encoding="utf8") as f:
                     a_file = open("input.txt")
                     liness = a_file.readlines()
                     for test in liness:
-                        print(test, end="")
-                        print()
+                        print(test)
                     a_file.close()
-                    # print(f"{line}")
                     print("______________________________________")
                     break
                 else:
