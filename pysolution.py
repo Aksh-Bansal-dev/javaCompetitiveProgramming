@@ -1,35 +1,26 @@
 import math
+def countDiv(n):
+	res = 1
+	temp = 0
+	while(n>0 and n%2==0):
+		temp+=1
+		n = n/2;
+	
+	res = temp+1
+	temp=1
 
-t = int(input())
-for test in range(t):
-    n = int(input())
-    if n == 1:
-        print("FastestFinger")
-    elif n == 2:
-        print("Ashishgup")
-    elif n % 2 != 0:
-        print("Ashishgup")
-    else:
-        even = 1
-        codd = 0
-        for i in range(2, math.floor(math.sqrt(n)) + 1):
-            if n % i == 0:
-                if i % 2 == 0:
-                    even *= i
-                else:
-                    codd += 1
-                num2 = n // i
-                if num2 % 2 == 0:
-                    even *= num2
-                else:
-                    codd += 1
-        if even == 2:
-            if codd == 1 or codd == 0:
-                print("FastestFinger")
-            else:
-                print("Ashishgup")
-        else:
-            if codd == 0:
-                print("FastestFinger")
-            else:
-                print("Ashishgup")
+	i = 3
+	while i*i<=n:
+		temp=0
+		if(n%i==0):
+			while(n%i==0):
+				temp+=1
+				n = n/i
+			res *=(temp+1);
+		i+=2
+	
+	if(n>1):
+		res *=2;
+	return res;
+
+print(countDiv(24));
