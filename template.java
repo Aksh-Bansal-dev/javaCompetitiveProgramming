@@ -107,10 +107,10 @@ public class Solution {
         // primes();
         // ________________________________
 
-        int t = sc.nextInt();
+        int test = sc.nextInt();
         StringBuilder output = new StringBuilder();
 
-        while (t-- > 0) {
+        while (test-- > 0) {
 
             output.append(solver()).append("\n");
         }
