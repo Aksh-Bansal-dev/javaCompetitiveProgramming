@@ -1,5 +1,5 @@
     static ArrayList<Integer>[] adj;
-    static void getAdj(int n,int q, FastReader sc){
+    static void getAdj(int n,int q){
         adj = new ArrayList[n+1];
         for(int i=1;i<=n;i++){
             adj[i] = new ArrayList<>();
