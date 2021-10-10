@@ -86,6 +86,7 @@ public class Solution {
         }
     }
 
+    static int mod = (int)1e9+7;
     static PrintWriter out;
     static FastReader sc ;
     public static void main(String[] args) throws IOException {
