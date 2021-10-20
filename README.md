@@ -14,7 +14,7 @@ My java setup for competitive programming.
 - Some resources
 
 ## How to use
-
+- Run `npx java-comp` to copy template to current directory 
 - Copy code from `template.java` to `Solution.java`
 - Code your solution in `Solution.java`
 - Enter testcase in `input.txt`
