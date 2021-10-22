@@ -3,6 +3,6 @@ import random
 
 # b = sys.argv[1]
 print(1)
-print(5)
-for i in range(1, 6):
-    print(random.randint(1, 10), end=" ")
+n = random.randint(1, 100)
+k = random.randint(0,n)
+print(n,k, end=" ")

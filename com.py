@@ -6,9 +6,9 @@ with open("output.txt", encoding="utf8") as f:
                     a_file = open("input.txt")
                     liness = a_file.readlines()
                     for test in liness:
-                        print(test)
+                        print(test, end="")
                     a_file.close()
-                    print("______________________________________")
+                    print("\n==================================")
                     break
                 else:
                     break

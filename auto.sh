@@ -7,11 +7,10 @@ echo "" > diff.txt
 while [ $a -lt 9 ]
 do 
     # Print the values
-    python gen.py > input.txt &&
-    python pysolution.py<input.txt>output2.txt &&
-    javac Solution.java &&
+    python3 gen.py > input.txt &&
+    java later <input.txt>output2.txt &&
     java Solution<input.txt>output.txt &&
-    python com.py>>diff.txt
+    python3 com.py>>diff.txt
     # increment the value
     a=`expr $a + 1`
 done
