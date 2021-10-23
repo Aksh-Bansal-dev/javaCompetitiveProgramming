@@ -29,7 +29,7 @@
 					getSumUtil(mid + 1, se, qs, qe, 2 * si + 2);
 		}
 
-		void updateValueUtil(int ss, int se, int i, int diff, int si)
+		void updateValueUtil(int ss, int se, int i, long diff, int si)
 		{
 			if (i < ss || i > se)
 				return;
@@ -42,16 +42,14 @@
 			}
 		}
 
-		void update(int arr[], int n, int i, int new_val)
+		void update(int n, int i, long new_val)
 		{
 			if (i < 0 || i > n - 1) {
 				System.out.println("Invalid Input");
 				return;
 			}
 
-			int diff = new_val - arr[i];
-
-			arr[i] = new_val;
+			long diff = new_val;
 
 			updateValueUtil(0, n - 1, i, diff, 0);
 		}
