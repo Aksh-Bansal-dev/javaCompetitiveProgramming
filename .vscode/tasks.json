@@ -7,7 +7,7 @@
       "label": "competitive java",
       "type": "shell",
 
-      "command": "if [ '${fileExtname}' = '.java' ]; then javac ${fileBasename} && java ${fileBasenameNoExtension} <input.txt>output.txt; elif [ '.py' = '${fileExtname}' ]; then python3 ${fileBasename} <input.txt>output.txt; elif [ '${fileExtname}' = 'c' ] || [ '${fileExtname}' = 'cpp' ]; then g++ ${fileBasename} && ./a.out <input.txt>output.txt; else echo 'File extension not supported'; fi",
+      "command": "if [ '${fileExtname}' = '.java' ]; then javac ${fileBasename} && java ${fileBasenameNoExtension} <input.txt>output.txt; elif [ '.py' = '${fileExtname}' ]; then python3 ${fileBasename} <input.txt>output.txt; elif [ '${fileExtname}' = '.c' ] || [ '${fileExtname}' = '.cpp' ]; then g++ ${fileBasename} && ./a.out <input.txt>output.txt; else echo 'File extension not supported'; fi",
 
       "problemMatcher": [],
       "group": {
