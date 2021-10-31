@@ -62,6 +62,14 @@ public class Solution {
             return temp*temp;
         }
     }
+    static int log(long n){
+        int res = 0;
+        while(n>0){
+            res++;
+            n/=2;
+        }
+        return res;
+    }
 
     static int mod = (int)1e9+7;
     static PrintWriter out;
