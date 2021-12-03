@@ -18,7 +18,7 @@ do
     java Gen > input.txt
     java Brute <input.txt>output2.txt
     java Solution<input.txt>output.txt
-    diff -wq output.txt output2.txt
+    diff -q output.txt output2.txt
     if [[ $? -eq 1 ]] 
     then
         echo "Testcase: $testcase"
