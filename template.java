@@ -88,7 +88,7 @@ public class Solution {
             output.append(solver()).append("\n");
         }
 
-        out.println(output);
+        out.print(output);
         // _______________________________
 
         // int n = sc.nextInt();
