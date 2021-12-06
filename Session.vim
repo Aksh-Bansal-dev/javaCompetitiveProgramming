@@ -10,7 +10,7 @@ set shortmess=aoO
 badd +1 Solution.java
 badd +1 template.java
 badd +1 later.java
-badd +1 input.txt
+badd +9 input.txt
 badd +1 output.txt
 badd +1 term
 badd +1 resources/modInv.java
@@ -19,7 +19,6 @@ badd +1 resources/fenwickTree.java
 badd +1 resources/segmentTree.java
 badd +17 resources/primeSeive.java
 badd +1 resources/adjacencyList.java
-badd +0 term://.//14217:/usr/bin/zsh
 argglobal
 %argdel
 $argadd Solution.java
@@ -29,10 +28,6 @@ wincmd _ | wincmd |
 vsplit
 1wincmd h
 wincmd w
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
@@ -41,41 +36,26 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe 'vert 1resize ' . ((&columns * 115 + 75) / 151)
-exe '2resize ' . ((&lines * 15 + 17) / 35)
 exe 'vert 2resize ' . ((&columns * 35 + 75) / 151)
-exe '3resize ' . ((&lines * 16 + 17) / 35)
-exe 'vert 3resize ' . ((&columns * 35 + 75) / 151)
 argglobal
-let s:l = 122 - ((20 * winheight(0) + 16) / 32)
+let s:l = 1 - ((0 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-122
+1
 normal! 0
 wincmd w
 argglobal
 if bufexists("input.txt") | buffer input.txt | else | edit input.txt | endif
-let s:l = 1 - ((0 * winheight(0) + 7) / 15)
+let s:l = 11 - ((10 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
-wincmd w
-argglobal
-if bufexists("term://.//14217:/usr/bin/zsh") | buffer term://.//14217:/usr/bin/zsh | else | edit term://.//14217:/usr/bin/zsh | endif
-let s:l = 1 - ((0 * winheight(0) + 8) / 16)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
+11
 normal! 0
 wincmd w
 exe 'vert 1resize ' . ((&columns * 115 + 75) / 151)
-exe '2resize ' . ((&lines * 15 + 17) / 35)
 exe 'vert 2resize ' . ((&columns * 35 + 75) / 151)
-exe '3resize ' . ((&lines * 16 + 17) / 35)
-exe 'vert 3resize ' . ((&columns * 35 + 75) / 151)
 tabedit template.java
 set splitbelow splitright
 set nosplitbelow
