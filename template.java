@@ -97,7 +97,7 @@ public class Solution {
         out.flush();
     }
 
-    public static int solver() {
+    public static long solver() {
         int res = 0;
         return res;
     }
