@@ -81,24 +81,21 @@ public class Solution {
         // ________________________________
 
         int test = sc.nextInt();
-        StringBuilder output = new StringBuilder();
 
         while (test-- > 0) {
 
-            output.append(solver()).append("\n");
+            solver();
         }
 
-        out.print(output);
         // _______________________________
 
         // int n = sc.nextInt();
-        // out.println(solver());
+        // solver();
         // ________________________________
         out.flush();
     }
 
-    public static long solver() {
-        int res = 0;
-        return res;
+    public static void solver() {
+
     }
 }
