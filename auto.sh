@@ -24,7 +24,7 @@ do
         echo "Testcase: $testcase"
         echo -e "${YELLOW}Input: ${NC}"
         cat input.txt
-        echo -e "${GREEN}Correct Output:${NC}"
+        echo -e "\n${GREEN}Correct Output:${NC}"
         cat output2.txt
         echo -e "${RED}Your Output:${NC}"
         cat output.txt
