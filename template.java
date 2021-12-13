@@ -1,8 +1,5 @@
 import java.util.*;
 import java.io.*;
-
-//           THIS TEMPLATE MADE BY AKSH BANSAL.
-
 public class Solution {
     static class FastReader {
         BufferedReader br;
@@ -78,20 +75,16 @@ public class Solution {
         sc = new FastReader();
         out = new PrintWriter(System.out);
         // primes();
-        // ________________________________
-
+        // ================================ //
         int test = sc.nextInt();
-
         while (test-- > 0) {
 
             solver();
         }
-
-        // _______________________________
-
+        // ================================ //
         // int n = sc.nextInt();
         // solver();
-        // ________________________________
+        // ================================ //
         out.flush();
     }
 
