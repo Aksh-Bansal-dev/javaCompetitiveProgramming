@@ -50,7 +50,7 @@ else
         java Gen > input.txt
         java Brute <input.txt>output2.txt
         java Solution<input.txt>output.txt
-        diff -q output.txt output2.txt
+        diff -wq output.txt output2.txt
         if [[ $? -eq 1 ]] 
         then
             echo "Testcase: $testcase"
@@ -58,12 +58,12 @@ else
             cat input.txt
             echo -e "\n${GREEN}Correct Output:${NC}"
             cat output2.txt
-            echo -e "${RED}Your Output:${NC}"
+            echo -e "\n${RED}Your Output:${NC}"
             cat output.txt
             break
         fi
     done
 
-    rm *.class output2.txt
+    rm *.class
 
 fi
