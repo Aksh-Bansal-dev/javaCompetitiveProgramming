@@ -6,12 +6,12 @@ GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
+# Compile common files
 javac Gen.java
 javac Solution.java
 
 if [[ $# -eq 1  ]] 
 then 
-    # Compile common files
 
     # Constructive solution(Solution with multiple correct answer)  
     # Match word -> 'Wrong!'

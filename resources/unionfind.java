@@ -8,7 +8,9 @@
     }
     static void union(int par[], int x, int y)
     {
-        int xset = find(par, x);
+        // optional for pure dsu
+        // int xset = find(par, x);
+        int xset = x;
         int yset = find(par, y);
         par[xset] = yset;
     }
