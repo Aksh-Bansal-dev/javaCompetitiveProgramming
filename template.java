@@ -60,12 +60,14 @@ public class Solution {
         }
     }
     static int log(long n){
+        if(n<=1)return 0;
+        long temp = n;
         int res = 0;
-        while(n>0){
+        while(n>1){
             res++;
             n/=2;
         }
-        return res;
+        return (1<<res)==temp?res:res+1;
     }
 
     static int mod = (int)1e9+7;
