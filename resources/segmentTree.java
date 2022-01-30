@@ -104,12 +104,10 @@
 				int mid = getMid(ss, se);
 				updateValueUtil(ss, mid, i, diff, 2 * si + 1);
 				updateValueUtil(mid + 1, se, i, diff, 2 * si + 2);
+                st[si] = gcd(get(ss,mid), get(mid+1,se));
 			}
             if(se==ss)
 			    st[si] = diff;
-            else
-                st[si] = gcd(getSumUtil(ss, mid, qs, qe, 2 * si + 1) ,
-					getSumUtil(mid + 1, se, qs, qe, 2 * si + 2))
 		}
 		void update(int i, long new_val)
 		{
@@ -139,6 +137,7 @@
 			return st[si];
 		}
 	}
+
 
 
 
