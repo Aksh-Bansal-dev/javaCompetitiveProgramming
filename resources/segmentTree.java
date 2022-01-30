@@ -29,7 +29,7 @@
 		{
 			if (i < ss || i > se)
 				return;
-			st[si] = diff;
+			st[si] += diff;
 			if (se != ss) {
 				int mid = getMid(ss, se);
 				updateValueUtil(ss, mid, i, diff, 2 * si + 1);
@@ -42,7 +42,8 @@
 				System.out.println(i+" Invalid Input u "+n);
 				return;
 			}
-			updateValueUtil(0, n - 1, i, new_val, 0);
+            long prev = this.get(i,i);
+			updateValueUtil(0, n - 1, i, new_val-prev, 0);
 		}
 		long get(int qs, int qe)
 		{
@@ -64,6 +65,8 @@
 			return st[si];
 		}
 	}
+
+
 
 
 	// =================================== GCD segment tree ============================================
@@ -102,7 +105,11 @@
 				updateValueUtil(ss, mid, i, diff, 2 * si + 1);
 				updateValueUtil(mid + 1, se, i, diff, 2 * si + 2);
 			}
-			st[si] = diff;
+            if(se==ss)
+			    st[si] = diff;
+            else
+                st[si] = gcd(getSumUtil(ss, mid, qs, qe, 2 * si + 1) ,
+					getSumUtil(mid + 1, se, qs, qe, 2 * si + 2))
 		}
 		void update(int i, long new_val)
 		{
