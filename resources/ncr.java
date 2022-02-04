@@ -31,6 +31,7 @@
             % p;
     }
 
+// =================== for large n ==================
     static long[][] memNcr; 
     static long ncr(int n, int r)
     {
