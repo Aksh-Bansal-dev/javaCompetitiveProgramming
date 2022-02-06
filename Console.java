@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Console{
-    static String log = "[LOG]";
+    static String log = "__";
     public static void log(long[][] arr){
         System.out.println(log);
         for(var e: arr){
