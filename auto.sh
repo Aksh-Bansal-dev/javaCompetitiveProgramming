@@ -26,6 +26,7 @@ then
             java Solution<input.txt>output.txt
 
             if grep -q 'Wrong!' output.txt; then
+                echo  "Testcase: $testcase"
                 echo -e "${YELLOW}Input: ${NC}"
                 cat input.txt
                 echo -e "\n${RED}Output:${NC}"
@@ -54,6 +55,7 @@ else
         diff -wq output.txt output2.txt
         if [[ $? -eq 1 ]] 
         then
+            echo  "Testcase: $testcase"
             echo -e "${YELLOW}Input: ${NC}"
             cat input.txt
             echo -e "\n${GREEN}Correct Output:${NC}"
