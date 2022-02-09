@@ -43,7 +43,6 @@ public class Solution {
         Collections.sort(arr);
         for(int i=0;i<a.length;i++)
         a[i]=arr.get(i);
-        
     }
     private static long gcd(long a, long b){
         if(b==0)return a;
