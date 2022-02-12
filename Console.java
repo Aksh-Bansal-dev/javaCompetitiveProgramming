@@ -10,6 +10,7 @@ class Console{
             }
             System.out.println( );
         }
+        System.out.println(log);
     }
     public static void log(String[][] arr){
         System.out.println(log);
@@ -19,6 +20,7 @@ class Console{
             }
             System.out.println( );
         }
+        System.out.println(log);
     }
     public static void log(char[][] arr){
         System.out.println(log);
@@ -28,6 +30,7 @@ class Console{
             }
             System.out.println( );
         }
+        System.out.println(log);
     }
     public static void log(int[][] arr){
         System.out.println(log);
@@ -37,6 +40,7 @@ class Console{
             }
             System.out.println( );
         }
+        System.out.println(log);
     }
     public static void log(double[][] arr){
         System.out.println(log);
@@ -46,6 +50,7 @@ class Console{
             }
             System.out.println( );
         }
+        System.out.println(log);
     }
     public static void log(int[] arr){
         System.out.print(log+" [");
