@@ -52,6 +52,23 @@ class Console{
         }
         System.out.println(log);
     }
+    public static void log(boolean[][] arr){
+        System.out.println(log);
+        for(var e: arr){
+            for(var l: e){
+                System.out.print(l+" ");
+            }
+            System.out.println( );
+        }
+        System.out.println(log);
+    }
+    public static void log(boolean[] arr){
+        System.out.print(log+" [");
+        for(var e: arr){
+            System.out.print(e+" ");
+        }
+        System.out.println("]");
+    }
     public static void log(int[] arr){
         System.out.print(log+" [");
         for(var e: arr){
