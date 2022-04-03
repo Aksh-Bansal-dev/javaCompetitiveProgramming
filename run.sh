@@ -6,12 +6,15 @@ GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-echo -e "${YELLOW}Input: ${NC}"
-cat input.txt
-echo -e "\n${YELLOW}Output: ${NC}"
 
 num="$#"
-if [[ "$num" = '0' ]]; then
+if [ "$num" = '0' ] || [ "$1" != '-ni' ]; then
+    echo -e "${YELLOW}Input: ${NC}"
+    cat input.txt
+    echo -e "\n${YELLOW}Output: ${NC}"
+fi
+
+if [ "$num" = '0' ] || [ "$1 $num" = '-ni 1' ]; then
     javac Solution.java && java Solution <input.txt  
     rm *.class
     exit 1
@@ -23,7 +26,9 @@ do
     filename="${i##*/}"
     fileExtname="${filename##*.}"
     fileBasenameNoExtension="${filename%%.*}"
-    if [ "${fileExtname}" = 'java' ]; then 
+    if [ "$i" = '-ni' ]; then
+        continue
+    elif [ "${fileExtname}" = 'java' ]; then 
         javac ${filename} && java ${fileBasenameNoExtension} <input.txt; 
         rm *.class;
     elif [ 'py' = "${fileExtname}" ]; then python3 ${filename} <input.txt; 
