@@ -51,12 +51,8 @@ public class Solution {
     private static long pow(long x,long y){
         if(y==0)return 1;
         long temp = pow(x, y/2);
-        if(y%2==1){
-            return x*temp*temp;
-        }
-        else{
-            return temp*temp;
-        }
+        if(y%2==1) return x*temp*temp;
+        else return temp*temp;
     }
     static int log(long n){
         if(n<=1)return 0;
