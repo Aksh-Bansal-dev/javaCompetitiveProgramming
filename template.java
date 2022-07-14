@@ -79,10 +79,6 @@ public class Solution {
 
             solver();
         }
-        // ================================ //
-        // int n = sc.nextInt();
-        // solver();
-        // ================================ //
         out.flush();
     }
 
