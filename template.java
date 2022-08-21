@@ -75,8 +75,8 @@ public class Solution {
         // primes();
         // ================================ //
         int test = sc.nextInt();
-        while (test-- > 0) {
-
+        for(int tt=1;tt<=test;tt++){
+            // out.print( "Case #"+tt+": ");
             solver();
         }
         out.flush();
