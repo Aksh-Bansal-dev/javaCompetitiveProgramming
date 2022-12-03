@@ -62,7 +62,7 @@ public class Solution {
             res++;
             n/=2;
         }
-        return (1<<res)==temp?res:res+1;
+        return (1l<<res)==temp?res:res+1;
     }
 
     static int mod = (int)1e9+7;
